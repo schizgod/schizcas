@@ -1,0 +1,20 @@
+<!-- myapp/templates/myapp/casino.html -->
+{% extends 'myapp/base.html' %}
+
+{% block title %}Казино - SCHIZ.GG{% endblock %}
+
+{% block content %}
+    <h2>Казино</h2>
+    <div class="banner-grid">
+        {% for casino_banner in casino_banners %}
+            <div class="banner-item">
+                <a href="{{ casino_banner.link }}">
+                    <img src="{{ casino_banner.image.url }}" alt="{{ casino_banner.title }}" class="banner-image">
+                </a>
+                <h3>{{ casino_banner.title }}</h3>
+                <p>{{ casino_banner.description }}</p>
+                <a href="{{ casino_banner.link }}" class="btn btn-primary">Играть сейчас</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

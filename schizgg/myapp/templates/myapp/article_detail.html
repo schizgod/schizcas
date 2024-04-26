@@ -1,0 +1,10 @@
+<!-- myapp/templates/myapp/article_detail.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{{ article.title }}</h2>
+    <p>{{ article.content }}</p>
+    {% if article.image %}
+        <img src="{{ article.image.url }}" alt="{{ article.title }}">
+    {% endif %}
+{% endblock %}

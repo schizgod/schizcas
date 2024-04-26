@@ -1,0 +1,11 @@
+<!-- myapp/templates/myapp/blackjack_publication_detail.html -->
+{% extends 'base.html' %}
+
+{% block title %}{{ blackjack_publication.title }} - 21 BJ Helper - SCHIZ.GG{% endblock %}
+
+{% block content %}
+    <h2>{{ blackjack_publication.title }}</h2>
+    <img src="{{ blackjack_publication.image.url }}" alt="{{ blackjack_publication.title }}">
+    <p>{{ blackjack_publication.description }}</p>
+    <!-- Добавьте любые другие детали, которые вы хотите отобразить -->
+{% endblock %}
